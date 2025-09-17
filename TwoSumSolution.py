@@ -1,5 +1,6 @@
 from typing import List
 
+# This solution has a time complexity of O(N)
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         checkednums = {}
