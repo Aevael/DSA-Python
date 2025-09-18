@@ -6,7 +6,7 @@ class ListNode:
          self.val = val
          self.next = next
 
-# This solution has a time complexity of O(Max(N,M))
+# The runtime complexity of this solution is O(Max(N,M))
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         n1 = 0

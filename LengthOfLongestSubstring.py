@@ -1,3 +1,21 @@
+# The runtime complexity of this solution is O(N)
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        windowleft = 0
+        maxlength = 0
+        charset = set()
+        
+        for windowright in range(len(s)):
+            while s[windowright] in char_set:
+                char_set.remove(s[windowleft])
+                left += 1
+
+            char_set.add(s[windowright])
+            max_length = max(max_length, windowright - windowleft + 1)
+        
+        return maxlength
+
+
 '''
 Given a string s, find the length of the longest substring without duplicate characters.
 

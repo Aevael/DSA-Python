@@ -1,6 +1,6 @@
 from collections import Counter
 
-# This solution has a time complexity of O(N)
+# The runtime complexity of this solution is O(N)
 class Solution:
     def maxFreqSum(self, s: str) -> int:
         vowels = {'a', 'e', 'i', 'o', 'u'}

@@ -1,6 +1,6 @@
 from typing import List
 
-# This solution has a time complexity of O(N)
+# The runtime complexity of this solution is O(N)
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         checkednums = {}
