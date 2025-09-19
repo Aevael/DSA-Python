@@ -6,11 +6,11 @@ class Solution:
         charset = set()
         
         for windowright in range(len(s)):
-            while s[windowright] in char_set:
-                char_set.remove(s[windowleft])
+            while s[windowright] in charset:
+                charset.remove(s[windowleft])
                 left += 1
 
-            char_set.add(s[windowright])
+            charset.add(s[windowright])
             max_length = max(max_length, windowright - windowleft + 1)
         
         return maxlength
