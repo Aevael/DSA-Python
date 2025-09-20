@@ -11,31 +11,31 @@ class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         n1 = 0
         n2 = 0
-        n1tracker = 0
-        n2tracker = 0
+        n1_tracker = 0
+        n2_tracker = 0
         check1 = True
         check2 = True
         while check1:
             if l1.next == None:
                 check1 = False
-            n1 += l1.val * (10 ** n1tracker)
-            n1tracker += 1
+            n1 += l1.val * (10 ** n1_tracker)
+            n1_tracker += 1
             l1 = l1.next
         while check2:
             if l2.next == None:
                 check2 = False
-            n2 += l2.val * (10 ** n2tracker)
-            n2tracker += 1
+            n2 += l2.val * (10 ** n2_tracker)
+            n2_tracker += 1
             l2 = l2.next
         result = n1 + n2
-        stringresult = str(result)
-        resultlist = []
+        string_result = str(result)
+        result_list = []
         head = None
-        for digit in stringresult:
-            currentnode = ListNode(int(digit), head)
-            resultlist.append(currentnode)
-            head = currentnode
-        return resultlist[-1]
+        for digit in string_result:
+            current_node = ListNode(int(digit), head)
+            result_list.append(current_node)
+            head = current_node
+        return result_list[-1]
     
 '''
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.

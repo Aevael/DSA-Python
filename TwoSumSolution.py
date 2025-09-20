@@ -3,13 +3,13 @@ from typing import List
 # The runtime complexity of this solution is O(N)
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        checkednums = {}
+        checked_nums = {}
         for index, num in enumerate(nums):
             x = target - num
-            if x in checkednums:
-                return [index, checkednums[x] ]
+            if x in checked_nums:
+                return [index, checked_nums[x] ]
             else:
-                checkednums.update({num : index})
+                checked_nums.update({num : index})
         return None
     
 '''

@@ -1,19 +1,19 @@
 # The runtime complexity of this solution is O(N)
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        windowleft = 0
-        maxlength = 0
-        charset = set()
+        window_left = 0
+        max_length = 0
+        char_set = set()
         
-        for windowright in range(len(s)):
-            while s[windowright] in charset:
-                charset.remove(s[windowleft])
-                left += 1
+        for window_right in range(len(s)):
+            while s[window_right] in char_set:
+                char_set.remove(s[window_left])
+                window_left += 1
 
-            charset.add(s[windowright])
-            max_length = max(max_length, windowright - windowleft + 1)
+            char_set.add(s[window_right])
+            max_length = max(max_length, window_right - window_left + 1)
         
-        return maxlength
+        return max_length
 
 
 '''

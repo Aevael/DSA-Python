@@ -4,15 +4,15 @@ from collections import Counter
 class Solution:
     def maxFreqSum(self, s: str) -> int:
         vowels = {'a', 'e', 'i', 'o', 'u'}
-        vowelcount = 0
-        consonantcount = 0
-        scounter = Counter(s)
-        for k, v in scounter.items():
+        vowel_count = 0
+        consonant_count = 0
+        string_counter = Counter(s)
+        for k, v in string_counter.items():
             if k in vowels:
-                vowelcount = max(vowelcount, v)
+                vowel_count = max(vowel_count, v)
             else:
-                consonantcount = max(consonantcount, v)
-        return vowelcount + consonantcount
+                consonant_count = max(consonant_count, v)
+        return vowel_count + consonant_count
     
 '''
 Problem Prompt:
